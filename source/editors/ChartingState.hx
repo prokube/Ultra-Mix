@@ -41,9 +41,9 @@ import openfl.utils.Assets as OpenFlAssets;
 import lime.media.AudioBuffer;
 import haxe.io.Bytes;
 import flash.geom.Rectangle;
-#if MODS_ALLOWED
 import sys.io.File;
 import sys.FileSystem;
+#if MODS_ALLOWED
 import flash.media.Sound;
 #end
 

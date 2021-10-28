@@ -71,8 +71,12 @@ class Main extends Sprite
 
 		Paths.getModFolders();
 		ClientPrefs.startControls();
+		#if !html5
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
-
+		#else
+		trace('1');
+		#end
+		
 		#if !mobile
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
@@ -81,9 +85,7 @@ class Main extends Sprite
 		}
 		#end
 
-		#if html5
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
-		#end
 	}
 }

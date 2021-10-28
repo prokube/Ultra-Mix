@@ -1,5 +1,7 @@
 package;
 
+import sys.io.File;
+import sys.FileSystem;
 import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.utils.AssetType;
@@ -227,8 +229,10 @@ class Paths
 	static public function getTextFromFile(key:String, ?ignoreMods:Bool = false):String
 	{
 		#if sys
-		if (!ignoreMods && FileSystem.exists(mods(key)))
+		#if MODS_ALLOWED
+		if (FileSystem.exists(mods(key)))
 			return File.getContent(mods(key));
+		#end
 
 		if (FileSystem.exists(getPreloadPath(key)))
 			return File.getContent(getPreloadPath(key));
