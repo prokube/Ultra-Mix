@@ -10,9 +10,9 @@
 	],
 	"weekBackground": "stage",
 
-	"storyName": "",
+	"storyName": "Before The Story",
 	"weekBefore": "tutorial",
-	"weekName": "Before The Story",
+	"weekName": "Tutorial",
 	"startUnlocked": true,
 
 	"hideStoryMode": false,
