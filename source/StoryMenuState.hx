@@ -390,7 +390,15 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist.text = '';
 		for (i in 0...stringThing.length)
 		{
-			txtTracklist.text += stringThing[i] + '\n';
+			switch (stringThing[i])
+			{
+				case "Winter Horrorland":
+					txtTracklist.text += 'Presents\n';
+				case "Monster":
+					txtTracklist.text += 'Octubre\n';
+				default:
+					txtTracklist.text += '${stringThing[i]}\n';
+			}
 		}
 
 		txtTracklist.text = txtTracklist.text.toUpperCase();
