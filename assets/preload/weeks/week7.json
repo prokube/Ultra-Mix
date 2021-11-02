@@ -1,0 +1,22 @@
+{
+	"songs": [
+		["Ugh", "tankman", [246, 181, 4]],
+		["Guns", "tankman", [246, 181, 4]],
+		["Stress", "tankman", [246, 181, 4]]
+	],
+
+	"weekCharacters": [
+		"senpai",
+		"bf",
+		"gf"
+	],
+	"weekBackground": "school",
+
+	"storyName": "TANKKUBE",
+	"weekBefore": "week6",
+	"weekName": "Week 6",
+	"startUnlocked": true,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}
