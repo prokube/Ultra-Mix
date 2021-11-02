@@ -74,7 +74,7 @@ class Main extends Sprite
 		#if !html5
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, zoom, framerate, framerate, skipSplash, startFullscreen));
 		#else
-		trace('1');
+		trace('2');
 		#end
 		
 		#if !mobile
