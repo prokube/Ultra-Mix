@@ -137,27 +137,17 @@ class ChartingState extends MusicBeatState
 	var zoomTxt:FlxText;
 	var curZoom:Int = 1;
 
-	#if !html5
 	var zoomList:Array<Float> = [
 		0.5,
+		0.67,
 		1,
-		2,
-		4,
-		8,
-		12,
-		16,
-		24
-	];
-	#else //The grid gets all black when over 1/12 snap
-	var zoomList:Array<Float> = [
-		0.5,
-		1,
+		1.25,
+		1.5,
 		2,
 		4,
 		8,
 		12
 	];
-	#end
 
 	private var blockPressWhileTypingOn:Array<FlxUIInputText> = [];
 	private var blockPressWhileScrolling:Array<FlxUIDropDownMenuCustom> = [];
@@ -1423,7 +1413,7 @@ class ChartingState extends MusicBeatState
 	}
 
 	function updateZoom() {
-		zoomTxt.text = 'Zoom: ' + zoomList[curZoom] + 'x';
+		zoomTxt.text = 'Zoom: ' + zoomList[curZoom] + 'x \nBeat Snap: 1/' + (zoomList[curZoom] * 4) + 'x';
 		reloadGridLayer();
 	}
 
