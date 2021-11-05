@@ -144,6 +144,7 @@ class ChartingState extends MusicBeatState
 		1.25,
 		1.5,
 		2,
+		3,
 		4,
 		8,
 		12
