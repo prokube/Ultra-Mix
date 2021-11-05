@@ -139,7 +139,7 @@ class ChartingState extends MusicBeatState
 
 	var zoomList:Array<Float> = [
 		0.5,
-		0.67,
+		0.75,
 		1,
 		1.25,
 		1.5,
