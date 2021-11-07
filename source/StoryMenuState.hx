@@ -369,6 +369,7 @@ class StoryMenuState extends MusicBeatState
 		updateText();
 
 		ClientPrefs.previousWeek = curWeek;
+		ClientPrefs.saveSettings();
 	}
 
 	function weekIsLocked(weekNum:Int) {
