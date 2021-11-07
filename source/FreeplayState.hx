@@ -388,6 +388,8 @@ class FreeplayState extends MusicBeatState
 		}
 		changeDiff();
 		Paths.currentModDirectory = songs[curSelected].folder;
+
+		ClientPrefs.previousWeek = curSelected;
 	}
 
 	private function positionHighscore() {

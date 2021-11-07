@@ -33,8 +33,8 @@ using StringTools;
 class TitleState extends MusicBeatState
 {
 	public static var muteKeys:Array<FlxKey> = [FlxKey.ZERO];
-	public static var volumeDownKeys:Array<FlxKey> = [FlxKey.NUMPADMINUS, FlxKey.MINUS];
-	public static var volumeUpKeys:Array<FlxKey> = [FlxKey.NUMPADPLUS, FlxKey.PLUS];
+	public static var volumeDownKeys:Array<FlxKey> = [FlxKey.MINUS];
+	public static var volumeUpKeys:Array<FlxKey> = [FlxKey.PLUS];
 
 	static var initialized:Bool = false;
 
@@ -177,13 +177,16 @@ class TitleState extends MusicBeatState
 			// music.play();
 
 			if(FlxG.sound.music == null) {
-				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+				FlxG.sound.playMusic(Paths.music('menu/freakyMenu'), 0);
 
+				var vocals:FlxSound = new FlxSound();
+
+				vocals.loadEmbedded(Paths.music('menu/vocals${ClientPrefs.previousWeek}'));
 				FlxG.sound.music.fadeIn(4, 0, 0.7);
 			}
 		}
 
-		Conductor.changeBPM(102);
+		Conductor.changeBPM(121);
 		persistentUpdate = true;
 
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
@@ -500,13 +503,13 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
 				case 13:
-					addMoreText('Friday');
+					addMoreText('F N F');
 				// credTextShit.visible = true;
 				case 14:
-					addMoreText('Night');
+					addMoreText('U1tra\'s');
 				// credTextShit.text += '\nNight';
 				case 15:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('Mixtape'); // credTextShit.text += '\nFunkin';
 
 				case 16:
 					skipIntro();

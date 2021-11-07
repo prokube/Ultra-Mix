@@ -367,6 +367,8 @@ class StoryMenuState extends MusicBeatState
 			bgSprite.loadGraphic(Paths.image('menubackgrounds/menu_' + assetName));
 		}
 		updateText();
+
+		ClientPrefs.previousWeek = curWeek;
 	}
 
 	function weekIsLocked(weekNum:Int) {
