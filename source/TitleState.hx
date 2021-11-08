@@ -180,9 +180,14 @@ class TitleState extends MusicBeatState
 				FlxG.sound.playMusic(Paths.music('menu/freakyMenu'), 0);
 
 				var vocals:FlxSound = new FlxSound();
+				vocals.loadEmbedded(Paths.music('menu/vocals' + ClientPrefs.previousWeek));
+				FlxG.sound.list.add(vocals);
+				vocals.volume = 0;
 
-				vocals.loadEmbedded(Paths.music('menu/vocals${ClientPrefs.previousWeek}'));
+				new FlxTimer().start(1.75, function(_){ vocals.play(); });
+				
 				FlxG.sound.music.fadeIn(4, 0, 0.7);
+				vocals.fadeIn(4, 0, 0.2);
 			}
 		}
 
@@ -443,7 +448,6 @@ class TitleState extends MusicBeatState
 		}
 	}
 
-	private var sickBeats:Int = 0; //Basically curBeat but won't be skipped if you hold the tab or resize the screen
 	private static var closedState:Bool = false;
 	override function beatHit()
 	{
@@ -462,8 +466,7 @@ class TitleState extends MusicBeatState
 		}
 
 		if(!closedState) {
-			sickBeats++;
-			switch (sickBeats)
+			switch (curBeat)
 			{
 				case 1:
 					createCoolText(['Psych Engine by'], 45);
@@ -510,8 +513,66 @@ class TitleState extends MusicBeatState
 				// credTextShit.text += '\nNight';
 				case 15:
 					addMoreText('Mixtape'); // credTextShit.text += '\nFunkin';
-
 				case 16:
+					deleteCoolText();
+
+				case 17:
+					createCoolText(['Made by'], 45);
+				// credTextShit.visible = true;
+				case 19:
+					addMoreText('U1tra', 45);
+					addMoreText('Prokube', 45);
+					addMoreText('Ruby Sakurai', 45);
+					addMoreText('M1le', 45);
+					addMoreText('Person', 45);
+					addMoreText('Person', 45);
+					addMoreText('Person', 45);
+					addMoreText('Person', 45);
+					addMoreText('Person', 45);
+					addMoreText('Person', 45);
+					addMoreText('Person', 45);
+				// credTextShit.text += '\npresent...';
+				// credTextShit.addText();
+				case 20:
+					deleteCoolText();
+				// credTextShit.visible = false;
+				// credTextShit.text = 'In association \nwith';
+				// credTextShit.screenCenter();
+				case 21:
+					createCoolText(['Made WITH'], -60);
+				case 23:
+					addMoreText('Perseverance', -60);
+					addMoreText('Stupidity', -60);
+					addMoreText('Patience', -60);
+					addMoreText('A lot of waiting time', -60);
+				// credTextShit.text += '\nNewgrounds';
+				case 24:
+					deleteCoolText();
+					curWacky = FlxG.random.getObject(getIntroTextShit());
+				// credTextShit.visible = false;
+
+				// credTextShit.text = 'Shoutouts Tom Fulp';
+				// credTextShit.screenCenter();
+				case 25:
+					createCoolText([curWacky[0]]);
+				// credTextShit.visible = true;
+				case 27:
+					addMoreText(curWacky[1]);
+				// credTextShit.text += '\nlmao';
+				case 28:
+					deleteCoolText();
+				// credTextShit.visible = false;
+				// credTextShit.text = "Friday";
+				// credTextShit.screenCenter();
+				case 29:
+					addMoreText('F N F');
+				// credTextShit.visible = true;
+				case 30:
+					addMoreText('U1tra\'s');
+				// credTextShit.text += '\nNight';
+				case 31:
+					addMoreText('Mixtape'); // credTextShit.text += '\nFunkin';
+				case 32:
 					skipIntro();
 			}
 		}

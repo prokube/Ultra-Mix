@@ -141,6 +141,8 @@ class ClientPrefs {
 			previousWeek = FlxG.save.data.previousWeek;
 		}
 
+		trace(previousWeek);
+
 		var save:FlxSave = new FlxSave();
 		save.bind('controls_v2', 'ninjamuffin99');
 		if(save != null && save.data.customControls != null) {
