@@ -27,7 +27,7 @@ It's Friday Night Funkin', with your favorite [Game not found in library] devs! 
 - [ ] Eggnog
 - [ ] Presents?
 - [ ] Senpai
-- [ ] Roses
+- [x] Roses
 - [ ] Thorns
 - [x] Ugh
 - [ ] Guns
