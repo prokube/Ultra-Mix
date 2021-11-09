@@ -29,7 +29,7 @@ It's Friday Night Funkin', with your favorite [Game not found in library] devs! 
 - [ ] Senpai
 - [ ] Roses
 - [ ] Thorns
-- [ ] Ugh (chart unfinished)
+- [x] Ugh
 - [ ] Guns
 - [x] Stress
 
