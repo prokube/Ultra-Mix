@@ -389,7 +389,7 @@ class FreeplayState extends MusicBeatState
 		changeDiff();
 		Paths.currentModDirectory = songs[curSelected].folder;
 
-		ClientPrefs.previousWeek = curSelected;
+		ClientPrefs.previousWeek = songs[curSelected].week;
 		ClientPrefs.saveSettings();
 	}
 

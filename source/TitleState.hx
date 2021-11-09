@@ -177,17 +177,9 @@ class TitleState extends MusicBeatState
 			// music.play();
 
 			if(FlxG.sound.music == null) {
-				FlxG.sound.playMusic(Paths.music('menu/freakyMenu'), 0);
-
-				var vocals:FlxSound = new FlxSound();
-				vocals.loadEmbedded(Paths.music('menu/vocals' + ClientPrefs.previousWeek));
-				FlxG.sound.list.add(vocals);
-				vocals.volume = 0;
-
-				new FlxTimer().start(1.75, function(_){ vocals.play(); });
+				FlxG.sound.playMusic(Paths.music('menu/menu${ClientPrefs.previousWeek}'), 0);
 				
 				FlxG.sound.music.fadeIn(4, 0, 0.7);
-				vocals.fadeIn(4, 0, 0.2);
 			}
 		}
 
