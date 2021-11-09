@@ -42,6 +42,8 @@ It's Friday Night Funkin', with your favorite [Game not found in library] devs! 
 
 \- Cally Cobble (i invited him to the repo but he never responded lol)
 
+\- RubySakurai (permission to use Ruby in Week 4, Ruby assets)
+
 ## Testers
 \- Prokube (MacOS)
 

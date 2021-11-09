@@ -8,10 +8,13 @@ SPECIAL THANKS TO:
 He came up with the idea and I applied for musician. 
 
 - M1le
-Being the Mommy Mearest replacement (Cat in fishnets LMAOOO)
+Being the original Mommy Mearest replacement (Cat in fishnets LMAOOO)
 
 - genesislol
 He made the icons supposedly. Nobody knows.
+
+- RubySakurai
+They let us use Ruby in Week 4. Also gave us the assets for Ruby (thx)
 
 - Existential Dread
 Making me feel useless :) thanks buddy
